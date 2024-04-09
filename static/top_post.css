@@ -2,6 +2,8 @@ body {
     font-family: helvetica;
     margin: 50px;
     padding: 0;
+    background-color: #121212;
+    color: white;
 }
 
 .container {
@@ -22,15 +24,11 @@ p {
 .downvote-pill {
     display: inline-block;
     padding: 5px 10px;
-    border: 10px;
     background-color: #121212;
-    border-color: white;/* Upvote color */
     color: white;
     border-radius: 20px; /* Make it pill-shaped */
     font-weight: 600;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(70, 70, 70);
+    border: 1px solid rgb(70, 70, 70);
     font-size: 12px;
 }
 
@@ -40,4 +38,47 @@ p {
     width: auto; /* Adjust width as needed */
     margin-top: 10px;
     border-radius: 60px; /* Make it a pill shape */
+}
+
+.top-comments {
+    margin-top: 20px;
+    width: 30%;
+}
+
+.top-comments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.comment-info .comment-user-avatar {
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-info .comment-details {
+    color: rgb(210, 210, 210);
+}
+
+.comment-info .comment-username {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.comment-info .comment-upvotes {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(176, 176, 176);
+}
+
+.comment-text {
+    margin: 0;
 }

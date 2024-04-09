@@ -13,9 +13,9 @@
             <p style="font-size: 13px; color: rgb(210, 210, 210); font-weight: 400">r/{{ subreddit }}</p>
             <p style="font-size: 13px; color: rgb(0, 140, 255); font-weight: 400">u/{{ author }}</p>
         </div>
-        <p style="color: white; margin: 5px; padding-top: 16px; color: rgb(176, 176, 176); font-size: 12px"> • {{ time }}h</p>
+        <p style="color: white; margin: 5px; padding-top: 16px; color: rgb(176, 176, 176); font-size: 12px"> • {{ posttime }}h</p>
     </div>
-    <p style="font-weight: 700">{{ title }}</p>
+    <p style="font-weight: 700; width: 30%">{{ title }}</p>
     <div class="vote-container">
         <span class="upvote-pill">⤴   {{ upvotes }}  &nbsp; | &nbsp;   ⤵</span>
         <span style="margin-left: 10px"class="upvote-pill">💬 {{ comments }}</span>
@@ -25,8 +25,25 @@
     <div class="top-comments">
         <h3>Top Comments:</h3>
         <ul>
-            {% for comment in top_comments %}
-                <li>{{ comment }}</li>
+            {% for comment_info in top_comments %}
+                <li>
+                    <div style="margin-bottom: 20px;">
+                    <div class="comment-info">
+                        <img class="comment-user-avatar" src="{{ comment_info['avatar_url'] }}">
+                        <div class="comment-details">
+                            <p class="comment-username">u/{{ comment_info['username'] }}  • {{ commenttime }}h</p>
+                        </div>
+                    </div>
+                    <p class="comment-text">{{ comment_info['text'] }}</p>
+                    <div class="vote-container" style="justify-content: right">
+                        <span style="font-size: 12px; margin-left: 12px; margin-top: 7px; font-weight: 300;
+                        color: rgb(210, 210, 210)">•••</span>
+                        <span style="font-size: 12px; margin-left: 12px; margin-top: 6px; font-weight: 600;
+                        color: rgb(210, 210, 210)">Reply</span>
+                        <span style="margin-left: 12px;" class="upvote-pill">⤴   {{ comment_info['upvotes'] }}  &nbsp; | &nbsp;   ⤵</span>
+                    </div>
+                    </div>
+                </li>
             {% endfor %}
         </ul>
     </div>
