@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<head>
+    <title>Top Post</title>
+</head>
+<body>
+    <h1>Top Post Information</h1>
+    <p>Title: {{ title }}</p>
+    <p>URL: <a href="{{ url }}">{{ url }}</a></p>
+    <p>Upvotes: {{ upvotes }}</p>
+</body>
+</html>
