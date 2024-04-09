@@ -1,5 +1,5 @@
 body {
-    font-family: arial;
+    font-family: helvetica;
     margin: 50px;
     padding: 0;
 }
@@ -7,7 +7,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .info {
@@ -29,8 +29,8 @@ p {
     border-radius: 20px; /* Make it pill-shaped */
     font-weight: 600;
     border-style: solid;
-    border-width: 1.5px;
-    border-color: rgb(122, 122, 122);
+    border-width: 1px;
+    border-color: rgb(70, 70, 70);
     font-size: 12px;
 }
 

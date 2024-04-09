@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: verdana;
+    font-family: helvetica;
     margin: 50px;
     padding: 0;
 }
@@ -58,5 +58,10 @@ body {
 
 .post-container p {
     margin: 10px 0;
+}
+
+.colortester {
+    color: rgb(0, 140, 255);
+    color: rgb(210, 210, 210);
 }
 
