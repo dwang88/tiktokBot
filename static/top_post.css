@@ -1,0 +1,43 @@
+body {
+    font-family: arial;
+    margin: 50px;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    margin-left: 10px; /* Add some spacing between the icon and text */
+}
+
+p {
+    margin: 0; /* Remove default margins */
+}
+
+.upvote-pill,
+.downvote-pill {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 10px;
+    background-color: #121212;
+    border-color: white;/* Upvote color */
+    color: white;
+    border-radius: 20px; /* Make it pill-shaped */
+    font-weight: 600;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(122, 122, 122);
+    font-size: 12px;
+}
+
+.vote-container {
+    display: flex;
+    justify-content: flex-start;
+    width: auto; /* Adjust width as needed */
+    margin-top: 10px;
+    border-radius: 60px; /* Make it a pill shape */
+}

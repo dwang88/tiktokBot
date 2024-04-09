@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Post</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='top_post.css') }}">
 </head>
-<head>
-    <title>Top Post</title>
-</head>
-<body>
-    <h1>Top Post Information</h1>
-    <p>Title: {{ title }}</p>
-    <p>URL: <a href="{{ url }}">{{ url }}</a></p>
-    <p>Upvotes: {{ upvotes }}</p>
+<body style="background-color: #121212; color: white">
+    <div class="container">
+        <img style="height: 30px; border-radius: 50%;" src="{{ icon }}">
+        <div class="info">
+            <p>r/{{ subreddit }}</p>
+            <p style="color: #007bff ">u/{{ author }}</p>
+        </div>
+        <p style="color: white; margin: 5px; padding-top: 20px; color: rgb(176, 176, 176); font-size: 12px"> • {{ time }}h</p>
+    </div>
+    <p style="font-weight: bold">{{ title }}</p>
+    <div class="vote-container">
+        <span class="upvote-pill">⤴    {{ upvotes }}   |    ⤵</span>
+        <span style="margin-left: 10px"class="upvote-pill">💬 {{ comments }}</span>
+    </div>
 </body>
 </html>

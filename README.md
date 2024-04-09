@@ -5,6 +5,15 @@
 python app.py
 ```
 
+
+
+
+# Archaic 
+1. Deploy Python App 
+```
+python app.py
+```
+
 2. Invoke Web Request (replace 'AskReddit' with any subreddit eg. UCSD)
 
 ```

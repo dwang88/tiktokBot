@@ -1,19 +1,23 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reddit Popular Post Bot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<head>
-    <title>Reddit Popular Post Bot</title>
-</head>
 <body>
-    <h1>Enter Subreddit:</h1>
-    <form action="/get_most_upvoted_post" method="post">
-        <label for="subreddit_link">Subreddit Name:</label><br>
-        <input type="text" id="subreddit_link" name="subreddit_link"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container">
+        <div class="form-container">
+            <h1>Enter Subreddit:</h1>
+            <form action="/get_most_upvoted_post" method="post">
+                <label for="subreddit_url">Subreddit:</label><br>
+                <input type="text" id="subreddit_url" name="subreddit_url"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

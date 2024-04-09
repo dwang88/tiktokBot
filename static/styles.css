@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: verdana;
     margin: 50px;
     padding: 0;
 }
@@ -28,11 +28,13 @@ body {
 }
 
 .form-container input[type="text"] {
-    width: 100%;
+    width: 97%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
 }
 
 .form-container input[type="submit"] {
