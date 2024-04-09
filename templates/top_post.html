@@ -20,5 +20,15 @@
         <span class="upvote-pill">⤴   {{ upvotes }}  &nbsp; | &nbsp;   ⤵</span>
         <span style="margin-left: 10px"class="upvote-pill">💬 {{ comments }}</span>
     </div>
+
+    <!-- Display top comments -->
+    <div class="top-comments">
+        <h3>Top Comments:</h3>
+        <ul>
+            {% for comment in top_comments %}
+                <li>{{ comment }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>

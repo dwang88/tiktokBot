@@ -37,10 +37,16 @@ def get_most_upvoted_post():
         num_comments = top_post.num_comments
         post_time = random.randint(1, 23)
         
-        # Render a template with the information about the top post
+        # Fetch the top 7 comments of the top post
+        top_comments = []
+        for comment in top_post.comments[:7]:
+            if isinstance(comment, praw.models.Comment):
+                top_comments.append(comment.body)
+        
+        # Render a template with the information about the top post and top comments
         return render_template('top_post.html', title=top_post_title, url=top_post_url, upvotes=top_post_upvotes, 
                                subreddit=top_post_subreddit, author=top_post_author, icon=subreddit_icon_url, 
-                               comments = num_comments, time = post_time)
+                               comments=num_comments, time=post_time, top_comments=top_comments)
     except Exception as e:
         return f"Error: {str(e)}"
 
